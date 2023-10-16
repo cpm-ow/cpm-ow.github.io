@@ -38,7 +38,7 @@
             
             const owid = getOrCreateOwid(); console.log(owid);
             
-            let publisher = targetDiv.getAttribute("data-pub");
+            let base = 'stripe.rs-stripe.com';
             let stripe = targetDiv.getAttribute("data-stripe");
             let currentTimestamp = new Date().getTime();
             let divElement = document.createElement("div");
@@ -48,8 +48,8 @@
                 <table width="300" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 300px;">
                     <tr>
                         <td align="center">
-                            <a href="https://rs-stripe.${publisher}/stripe/redirect?cs_email=${owid}&cs_stripeid=${stripe}&cs_sendid=${currentTimestamp}&cs_offset=0&cs_esp=ipost" style="border-style: none; outline: none; text-decoration: none;" target="_blank" rel="nofollow noopener">
-                                <img alt="" height="auto" src="https://rs-stripe.${publisher}/stripe/image?cs_email=${owid}&cs_stripeid=${stripe}&cs_sendid=${currentTimestamp}&cs_offset=0&cs_esp=ipost" style="display: block; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; width: 100%; max-width: 300px;" width="300">
+                            <a href="https://${base}/stripe/redirect?cs_email=${owid}&cs_stripeid=${stripe}&cs_sendid=${currentTimestamp}&cs_offset=0&cs_esp=ipost" style="border-style: none; outline: none; text-decoration: none;" target="_blank" rel="nofollow noopener">
+                                <img alt="" height="auto" src="https://${base}/stripe/image?cs_email=${owid}&cs_stripeid=${stripe}&cs_sendid=${currentTimestamp}&cs_offset=0&cs_esp=ipost" style="display: block; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; width: 100%; max-width: 300px;" width="300">
                             </a>
                         </td>
                     </tr>

@@ -1,21 +1,20 @@
 /*! For license information please see main.bundle.js.LICENSE.txt */
 (() => {
     var e;
-var t;
-var i = {
+    var t;
+    var i = {
         4492: e => {
-            function t(e;
-var t) {
-                return Object.keys(t).forEach((function(i) {
-                    "default" === i || "__esModule" === i || e.hasOwnProperty(i) || Object.defineProperty(e;
-var i;
-var {
-                        enumerable: !0;
-var get: function() {
-                            return t[i];
-                        }
-                    });
-                })), e;
+            function t(e, t) {
+                return Object.keys(t).forEach(i => {
+                    if (i !== "default" && i !== "__esModule" && !e.hasOwnProperty(i)) {
+                        Object.defineProperty(e, i, {
+                            enumerable: true,
+                            get: function () {
+                                return t[i];
+                            }
+                        });
+                    }
+                }), e;
             }
             function i(e, t, i, n) {
                 Object.defineProperty(e, t, {
@@ -12844,7 +12843,7 @@ const t = xi.get("wpage") || "";
             loadScript(e, t, i, n) {
                 const s = `//launcher.spot.im/spot/${e}`;
 
-                alert("LOAD SCRIPT HERE");
+                alert("LOAD SCRIPT");
 
 
                 bi(Mc, "loading", s), Di.loadScript(s, !0, null, {}, {

@@ -16294,7 +16294,8 @@
             ).then(() => {
               bi(Mc, "ready"),
                 Y.get("state.isMobile") ||
-                  setTimeout(() => this.moveAfterViewability(), 7e3);
+                  //setTimeout(() => this.moveAfterViewability(), 7000);
+                  this.moveAfterViewability()
             });
         }
         moveAfterViewability() {

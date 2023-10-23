@@ -49,10 +49,14 @@ var s = {};
                     } catch (e) {
                         i = !1;
                     }
+                    
                     const n = e => window?.instantConfigCache?.[e] ?? null;
-const s = (e;
-const t) => {
-                        void 0 === window.instantConfigCache && (window.instantConfigCache = {});
+
+                    const s = (e, t) => {
+                        if (void 0 === window.instantConfigCache) {
+                            window.instantConfigCache = {};
+                        }
+                    };
 const window.instantConfigCache[e] = t;
                     };
                     this.storageAdapter = {
